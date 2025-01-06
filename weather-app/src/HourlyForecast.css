@@ -1,0 +1,112 @@
+
+.hourly-forecast {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    font-family: 'Arial', sans-serif;
+    color: #090909;
+  padding: 20px 70px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+  }
+  
+  .hourly-forecast h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #4a90e2;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+  
+  .hourly-forecast-list {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+  
+  .hourly-forecast-item {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hourly-forecast-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hourly-forecast-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .hourly-forecast-item i {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .hourly-forecast-item {
+    animation: fadeIn 0.5s ease-in-out;
+    
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .hourly-forecast {
+        padding: 15px;
+    }
+  
+    .hourly-forecast h2 {
+        font-size: 1.5rem;
+    }
+  
+    .hourly-forecast-item {
+        padding: 8px;
+    }
+  
+    .hourly-forecast-item p {
+        font-size: 0.9rem;
+    }
+  
+    .hourly-forecast-item i {
+        font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hourly-forecast-list {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+  
+    .hourly-forecast h2 {
+        font-size: 1.3rem;
+    }
+  
+    .hourly-forecast-item p {
+        font-size: 0.8rem;
+    }
+  
+    .hourly-forecast-item i {
+        font-size: 1rem;
+    }
+  }
+  

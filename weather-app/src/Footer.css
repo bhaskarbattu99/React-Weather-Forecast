@@ -1,0 +1,86 @@
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    box-sizing: border-box; 
+    transition: background-color 0.5s ease-in-out;
+    position: relative; 
+    bottom: 0; 
+    margin-top: 200px;
+   
+  }
+  
+  /* Footer content layout */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Profile photo styling */
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .profile-photo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Footer text animations */
+  .footer p {
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Social media icons styling */
+  .social-media {
+    margin-top: 0.5rem;
+  }
+  
+  .social-media a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
+  }
+  
+  .social-media a:hover {
+    color: #1da1f2; /* Change color on hover */
+    transform: scale(1.2); /* Scale up the icon on hover */
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+  
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+  
+    .social-media a {
+        font-size: 1.2rem;
+    }
+  }

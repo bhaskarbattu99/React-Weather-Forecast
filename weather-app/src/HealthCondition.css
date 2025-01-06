@@ -1,0 +1,71 @@
+/* HealthCondition.css */
+.health-condition {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+  }
+ 
+  
+  .health-condition:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+  }
+
+  
+  .health-condition h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #4a90e2;
+    text-transform: uppercase;
+  }
+  
+  .health-condition ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .health-condition li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: #090909;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  .health-condition i {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #007BFF;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media(min-width:1024){
+    .health-condition{
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .health-condition h2{
+      font-size: 32px;
+    }
+    .health-condition li{
+      font-size: 18px;
+    }
+  }

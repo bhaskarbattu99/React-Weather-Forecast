@@ -1,0 +1,207 @@
+/* Forecast and Weather Cards */
+.weather-card, .forecast-card {
+ 
+    margin: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .weather-card:hover, .forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .forecast-day {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  
+  .forecast-temp, .forecast-humidity, .forecast-wind, .forecast-condition {
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .forecast-temp i, .forecast-humidity i, .forecast-wind i, .forecast-condition i {
+    margin-right: 10px;
+    color: #ff4500;
+  }
+  
+  .percentage {
+    font-weight: bold;
+    font-size: 18px;
+    color: #007bff;
+    animation: percentageAnimation 1s ease-in-out;
+  }
+  
+  @keyframes percentageAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .search-input {
+        width: 80%;
+    }
+  
+    .search-button {
+        width: 80%;
+    }
+  }
+  
+   /* weather.js css */
+  
+  .weather-card {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    /* padding: 50px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    font-family: 'Lora', serif;
+    color: #090909;
+    animation: fadeIn 1s ease-out;
+  }
+  .weather-card h2 { 
+    font-family: 'Lora', serif; 
+    color: #007BFF; 
+  }
+  .weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .weather-info {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .weather-info i {
+    margin-right: 10px;
+    color: #ff4500;
+    transition: transform 0.3s ease;
+  }
+  .day-name {
+     font-family: 'Courier New, Courier, monospace'; 
+     color: #0056b3;
+    font-weight: bold;
+   }  
+  .time
+   {  color: #0056b3;
+     font-weight: normal; }
+  
+  
+  .weather-card:hover i {
+    transform: rotate(360deg);
+    color: #090908;
+  }
+  
+  .percentage {
+    font-weight: bold;
+    font-size: 18px;
+    color: #007bff;
+    animation: percentageAnimation 1s ease-in-out;
+  }
+  /* Country Flag Styles */
+  .country-flag {
+    /* margin-left: 100px; */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+    animation: flagFadeIn 1s ease-out; 
+  }
+  
+  
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes percentageAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .weather-card {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .weather-card {
+      padding: 15px;
+    }
+  
+    .weather-info {
+      font-size: 14px;
+    }
+  
+    .weather-info i {
+      font-size: 18px;
+    }
+  
+    .percentage {
+      font-size: 16px;
+    }
+  }
+  
+  .weather-icon{
+    display: flex;
+   padding: 0;
+   margin-left: 50px;
+    
+  }
+.h3{
+  text-align: center;
+    font-size: 1.8rem;
+    color: #4a90e2;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+

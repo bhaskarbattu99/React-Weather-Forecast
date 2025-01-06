@@ -1,0 +1,150 @@
+/* forecast.js css  */
+ .forecast {
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+    
+  }
+  
+  .forecast-header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #4a90e2;
+    text-transform: uppercase;
+  }
+  
+  .forecast-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+  }
+  
+  .forecast-card {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .forecast-day {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 5px;
+  }
+  
+  .forecast-date {
+    font-size: 14px;
+    color: #090909;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-temp, .forecast-humidity, .forecast-wind, .forecast-condition {
+    font-size: 16px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    color: #090909;
+  }
+  
+  .forecast-temp i, .forecast-humidity i, .forecast-wind i, .forecast-condition i {
+    margin-right: 10px;
+    color: #ff4500;
+    transition: transform 0.3s ease;
+  }
+  
+  .forecast-temp i:hover, .forecast-humidity i:hover, .forecast-wind i:hover, .forecast-condition i:hover {
+    transform: rotate(360deg);
+    color: #080808;
+  }
+  
+  .percentage {
+    font-weight: bold;
+    font-size: 18px;
+    color: #007bff;
+    animation: percentageAnimation 1s ease-in-out;
+  }
+  
+  .forecast-condition {
+    color: #333;
+  }
+  .forecast-cards :hover i{
+      transform: rotate(360deg);
+      color: #090908;
+    
+  
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes percentageAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .forecast-card {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .forecast-card {
+      padding: 15px;
+    }
+  
+    .forecast-day {
+      font-size: 16px;
+    }
+  
+    .forecast-temp, .forecast-humidity, .forecast-wind, .forecast-condition {
+      font-size: 14px;
+    }
+  
+    .forecast-temp i, .forecast-humidity i, .forecast-wind i, .forecast-condition i {
+      font-size: 18px;
+    }
+  
+    .percentage {
+      font-size: 16px;
+    }
+  }
+  
+  .forecast-icon{
+    display: flex;
+    padding: 0;
+    margin-left: 40px;
+  }
+  
